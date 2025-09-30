@@ -106,7 +106,7 @@ async function startServer() {
       console.warn('警告: 数据库连接失败，请检查数据库配置。服务器将继续运行，但数据操作可能失败。');
     }
     
-    app.listen(PORT, () => {
+    app.listen(PORT,'0.0.0.0', () => {
       console.log(`服务器运行在 http://175.178.89.88:${PORT}`);
       console.log(`健康检查地址: http://175.178.89.88:${PORT}/health`);
       console.log(`API 地址: http://175.178.89.88:${PORT}/api/forms`);
